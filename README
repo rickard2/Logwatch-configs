@@ -1,0 +1,22 @@
+A. What's this?
+
+This is a configuration file and parsing script for grsecurity enabled kernels. 
+It's pretty basic so far, if you make any improvements please do share them.
+
+
+B. Installation
+
+1. Copy grsec.conf to /etc/logwatch/conf/services
+2. Copy grsec to /etc/logwatch/scripts/services
+3. Make grsec script executable 
+
+$ cp grsec.conf /etc/logwatch/config/services/
+$ cp grsec /etc/logwatch/scripts/services/
+$ chmod +x /etc/logwatch/scripts/services/grsec 
+
+
+C. Testing 
+
+For testing I'm using logwatch with --output stdout 
+
+$ logwatch --output stdout 

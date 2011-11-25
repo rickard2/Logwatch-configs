@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+import sys
+import re
+
+rx_pax   = re.compile("PAX:.+"); 
+rx_grsec = re.compile("grsec:.+");
+
+first    = True
+
+for line in sys.stdin.readlines():
+
+	if ( rx_pax.match(line) ):
+
+		if ( first ):
+			print "grsec/PAX events:"
+			first = False
+
+		print "   " + line,
+
+	elif ( rx_grsec.match(line) ):
+
+		if ( first ):
+			print "grsec/PAX events:"
+			first = False
+
+		print "   " + line,
