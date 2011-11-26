@@ -3,14 +3,14 @@
 import sys
 import re
 
-rx_pax   = re.compile("PAX:.+"); 
-rx_grsec = re.compile("grsec:.+");
+rx_pax   = "PAX:"
+rx_grsec = "grsec:"
 
 first    = True
 
 for line in sys.stdin.readlines():
 
-	if ( rx_pax.match(line) ):
+	if ( re.search( rx_pax, line ) ):
 
 		if ( first ):
 			print "grsec/PAX events:"
@@ -18,7 +18,7 @@ for line in sys.stdin.readlines():
 
 		print "   " + line,
 
-	elif ( rx_grsec.match(line) ):
+	elif ( re.search( rx_grsec, line ) ):
 
 		if ( first ):
 			print "grsec/PAX events:"
