@@ -20,6 +20,8 @@ $ chmod +x /etc/logwatch/scripts/services/grsec
 
 C. Testing 
 
-For testing I'm using logwatch with --output stdout 
+For testing I'm using paxtest to generate some log entries and then and logwatch 
+with --output stdout and --range Today to see if the paxtest output is included. 
 
-$ logwatch --output stdout 
+$ paxtest kiddie 
+$ logwatch --output stdout --range Today
