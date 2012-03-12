@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Ignore the log file output and just generate the output directly from vnstat
+# Rickard Andersson <rickard@0x539.se>
+
+vnstat
