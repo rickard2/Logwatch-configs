@@ -1,4 +1,4 @@
-Logwatch for grsecurity enabled kernels
+A couple of Logwatch configuration files
 =
 
 What's this?
